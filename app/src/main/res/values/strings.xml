@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BookSearch</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="default_title">Title</string>
+    <string name="image_cont_desc">Cover Image</string>
+    <string name="default_author">Author</string>
+</resources>
