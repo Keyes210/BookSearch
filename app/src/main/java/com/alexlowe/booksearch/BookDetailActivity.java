@@ -35,7 +35,6 @@ public class BookDetailActivity extends AppCompatActivity {
     private TextView tvAuthor;
     private TextView tvPublisher;
     private TextView tvPageCount;
-    private BookClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +65,7 @@ public class BookDetailActivity extends AppCompatActivity {
         tvAuthor.setText(book.getAuthor());
 
         // fetch extra book data from books API
-        client = new BookClient();
+        BookClient client = new BookClient();
         client.getExtraBookDetails(book.getOpenLibraryID(), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -137,7 +136,7 @@ public class BookDetailActivity extends AppCompatActivity {
     public Uri getLocalBitmapUri(ImageView imageView) {
         // Extract Bitmap from ImageView drawable
         Drawable drawable = imageView.getDrawable();
-        Bitmap bmp = null;
+        Bitmap bmp;
         if(drawable instanceof BitmapDrawable){
             bmp = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
         }else{
