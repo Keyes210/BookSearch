@@ -6,12 +6,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Alex on 8/21/2015.
  */
-public class Book {
+public class Book implements Serializable { //we want to be able to pass the book object from the list to this detail view, so let's make our Book class serializable:
     private String openLibraryID;
     private String title;
     private String author;

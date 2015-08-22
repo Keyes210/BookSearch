@@ -24,10 +24,16 @@ public class BookClient {
     // Method for accessing the search API
     public void getBooks(final String query, JsonHttpResponseHandler handler){
         try {
-            String url = getApiUrl("search.jason?q=");
+            String url = getApiUrl("search.json?q=");
             client.get(url + URLEncoder.encode(query, "utf-8"), handler);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+    }
+
+    // Method for accessing books API to get publisher and no. of pages in a book.
+    public void getExtraBookDetails(String openLibraryID, JsonHttpResponseHandler handler){
+        String url = getApiUrl("books/");
+        client.get(url + openLibraryID + ".json", handler);
     }
 }

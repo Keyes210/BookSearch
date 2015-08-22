@@ -6,4 +6,8 @@
     <string name="default_title">Title</string>
     <string name="image_cont_desc">Cover Image</string>
     <string name="default_author">Author</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_book_detail">Book Detail</string>
+    <string name="publisher">Published By</string>
+    <string name="action_share">Share</string>
 </resources>
